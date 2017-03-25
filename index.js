@@ -20,11 +20,13 @@ function toEdge(node) {
 exports.pageInfo = pageInfo
 function pageInfo(items, opts) {
   opts = opts || {}
+  const first = items[0]
+  const last = items[items.length - 1]
   return {
     hasNextPage: !!opts.hasNextPage,
     hasPreviousPage: !!opts.hasPreviousPage,
-    startCursor: toCursor(items[0].id),
-    endCursor: toCursor(items[items.length - 1].id),
+    startCursor: first ? toCursor(first.id) : null,
+    endCursor: last ? toCursor(last.id) : null,
   }
 }
 

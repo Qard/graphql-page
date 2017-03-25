@@ -88,3 +88,17 @@ tap.test('converts a list to a page', t => {
   t.strictSame(page(testList, testPageOptions), testPage)
   t.end()
 })
+
+tap.test('should not fail when the list is empty', t => {
+  t.strictSame(page([], testPageOptions), {
+    count: 0,
+    edges: [],
+    pageInfo: {
+      hasNextPage: true,
+      hasPreviousPage: true,
+      startCursor: null,
+      endCursor: null
+    }
+  })
+  t.end()
+})
