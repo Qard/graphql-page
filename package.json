@@ -1,0 +1,27 @@
+{
+  "name": "graphql-page",
+  "version": "1.0.0",
+  "description": "Pagination helper for Connection and ConnectionEdge style results in graphql resolvers",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qard/graphql-page.git"
+  },
+  "keywords": [
+    "graphql",
+    "pagination",
+    "connection"
+  ],
+  "author": "Stephen Belanger <admin@stephenbelanger.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qard/graphql-page/issues"
+  },
+  "homepage": "https://github.com/Qard/graphql-page#readme",
+  "devDependencies": {
+    "tap": "^10.3.0"
+  }
+}
