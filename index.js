@@ -1,7 +1,6 @@
 exports = module.exports = page
 exports.page = page
-function page(records, opts) {
-  var items = records.map(toJSON)
+function page(items, opts) {
   return {
     count: items.length,
     edges: items.map(toEdge),
@@ -13,7 +12,7 @@ exports.toEdge = toEdge
 function toEdge(node) {
   return {
     node: node,
-    cursor: toCursor(node.id)
+    cursor: toCursor(toJSON(node).id)
   }
 }
 
@@ -25,8 +24,8 @@ function pageInfo(items, opts) {
   return {
     hasNextPage: !!opts.hasNextPage,
     hasPreviousPage: !!opts.hasPreviousPage,
-    startCursor: first ? toCursor(first.id) : null,
-    endCursor: last ? toCursor(last.id) : null,
+    startCursor: first ? toCursor(toJSON(first).id) : null,
+    endCursor: last ? toCursor(toJSON(last).id) : null,
   }
 }
 
