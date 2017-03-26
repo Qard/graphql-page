@@ -1,6 +1,6 @@
 {
   "name": "graphql-page",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Pagination helper for Connection and ConnectionEdge style results in graphql resolvers",
   "main": "index.js",
   "scripts": {
