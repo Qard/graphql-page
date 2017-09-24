@@ -1,5 +1,7 @@
 # graphql-page
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Qard/graphql-page.svg)](https://greenkeeper.io/)
+
 This module is a collection of helpers to compose Connect + ConnectionEdge
 style pagination with graphql.
 
